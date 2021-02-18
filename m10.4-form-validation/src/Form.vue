@@ -4,7 +4,7 @@
   <h1>Form <span>VUE</span>lidation</h1>
   <form>
     
-    <Validation :inputName="name" :labelName="nameTitle" :id="'name'" @checkInput="validateInput">
+    <Validation :inputName="name" :labelName="nameTitle" :id="'name'">
       <input 
         type="text" 
         required 
@@ -45,20 +45,22 @@
         required 
         v-model="passwordTwo">
     </Validation>
-
-    <button type="submit" @click.prevent="submitForm">Submit</button>
+    
+    <button type="submit" @click="validateInputs">Submit</button>
 
   </form>
 
   
-  <!--<template v-if="displayResults">
+  <template v-if="isValid"> 
+    <div class="results-container">
       <p><span>Name:</span> {{ name }}</p>
       <p><span>Number:</span> {{ number }}</p>
       <p><span>Postcode:</span> {{ postcode }}</p>
       <p><span>Email:</span> {{ email }}</p>
       <p><span>Password:</span> {{ password }}</p>
-    </template> -->
- 
+    </div>
+  </template>
+
 </template> 
 
 <!-- SCRIPT -->
