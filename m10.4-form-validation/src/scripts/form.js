@@ -21,7 +21,7 @@ export default {
 
       isValid: false,
       toast: false,
-      toastMessage: "Empty or invalid fields"
+      toastMessage: "Unable to submit (invalid fields)"
     }
   },
   methods: {

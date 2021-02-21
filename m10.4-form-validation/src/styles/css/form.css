@@ -100,11 +100,14 @@ button:hover {
   border-radius: 0.5rem;
   box-shadow: 2px 2px 3px #2c3e50;
   padding: 1rem 3rem;
-  margin: 2rem auto;
-  background-color: rgba(233, 64, 64, 0.835);
+  left: 0;
+  right: 0;
+  margin: -6rem auto;
+  background-color: rgb(216, 80, 80);
   font-size: 1.2rem;
   font-weight: 600;
   color: white;
+  position: absolute;
 }
 
 /* ANIMATIONS */
@@ -121,19 +124,16 @@ button:hover {
 }
 
 /* Error */
+
 .toast-enter-active {
   animation: wobble 0.5s ease;
-}
-.toast-leave-from {
-  opacity: 1; 
-  transform: translateY(0px);
 }
 .toast-leave-to {
   opacity: 0; 
   transform: translateY(-100px);
 }
 .toast-leave-active {
-  animation: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 @keyframes wobble {
@@ -149,6 +149,7 @@ button:hover {
 /* Inputs */
 .input-name-enter-from {
   opacity: 0;
+  transform: scale(1.2);
 }
 .input-name-enter-active {
   transition: all 1s ease;
@@ -156,35 +157,40 @@ button:hover {
 
 .input-number-enter-from {
   opacity: 0;
+  transform: scale(1.2);
 }
 .input-number-enter-active {
-  transition: all 1.5s ease;
+  transition: all 1.3s ease;
 }
 
 .input-postcode-enter-from {
   opacity: 0;
+  transform: scale(1.2);
 }
 .input-postcode-enter-active {
-  transition: all 2s ease;
+  transition: all 1.6s ease;
 }
 
 .input-email-enter-from {
   opacity: 0;
+  transform: scale(1.2);
 }
 .input-email-enter-active {
-  transition: all 2.5s ease;
+  transition: all 1.9s ease;
 }
 
 .input-password-enter-from {
   opacity: 0;
+  transform: scale(1.2);
 }
 .input-password-enter-active {
-  transition: all 3s ease;
+  transition: all 2.2s ease;
 }
 
 .input-password-two-enter-from {
   opacity: 0;
+  transform: scale(1.2);
 }
 .input-password-two-enter-active {
-  transition: all 3.5s ease;
+  transition: all 2.5s ease;
 }
