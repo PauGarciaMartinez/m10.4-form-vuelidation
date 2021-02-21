@@ -19,7 +19,9 @@ export default {
       passwordTitle: "Password",
       passwordTwoTitle: "Confirm your password",
 
-      isValid: false
+      isValid: false,
+      toast: false,
+      toastMessage: "Empty or invalid fields"
     }
   },
   methods: {
@@ -36,7 +38,10 @@ export default {
       this.passwordTwo !== "") {
         
         this.isValid = true
-      } 
+      } else {
+        this.toast = true
+        setTimeout(() => this.toast = false, 3000)
+      }
     }
   }
 }
